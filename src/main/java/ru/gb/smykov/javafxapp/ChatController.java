@@ -19,6 +19,7 @@ public class ChatController {
     public void clickSendButton() {
         String message = userMassage.getText();
         userMassage.clear();
+        userMassage.requestFocus();
         Date dateNow = new Date();
         SimpleDateFormat formatForDateNow = new SimpleDateFormat("dd.MM.yyyy hh:mm:ss");
         chatArea.appendText(formatForDateNow.format(dateNow) + ": " + message + "\n");
